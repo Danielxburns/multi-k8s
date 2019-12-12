@@ -1,4 +1,4 @@
-apiVersion: certmanager.k8s.io/1valpha2
+apiVersion: cert-manager.io/1valpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
@@ -9,4 +9,3 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     http01: {}
-    
