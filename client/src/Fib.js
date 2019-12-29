@@ -55,6 +55,7 @@ class Fib extends Component {
   render() {
     return (
       <div>
+        <br></br>
         <form onSubmit={this.handleSubmit}>
           <label>Enter your index:</label>
           <input
@@ -63,7 +64,7 @@ class Fib extends Component {
           />
           <button>Submit</button>
         </form>
-
+        <p>***Refresh page to see results***</p>
         <h3>Indexes I have seen:</h3>
         {this.renderSeenIndexes()}
 
