@@ -27,7 +27,6 @@ class Fib extends Component {
   }
 
   handleSubmit = async (event) => {
-    /*     event.preventDefault(); */
 
     await axios.post('/api/values', {
       index: this.state.index
@@ -45,8 +44,8 @@ class Fib extends Component {
     for (let key in this.state.values) {
       entries.push(
         <div key={key}>
-          For index <span className="Fib-calc"/* style={{color: 'rgb(186,76,99)'}} */>{key}</span> I have calculated{' '}
-          <span className="Fib-calc"/* style={{color: 'rgb(186,76,99)'}} */>{this.state.values[key]}</span>
+          For index <span className="Fib-calc">{key}</span> I have calculated{' '}
+          <span className="Fib-calc">{this.state.values[key]}</span>
         </div>
       );
     }
@@ -67,7 +66,7 @@ class Fib extends Component {
           <button>Submit</button>
         </form>
         <h3>Indexes I have seen:</h3>
-        <span className="Fib-calc"/* style={{color: 'rgb(186,76,99'}} */>{this.renderSeenIndexes()}</span>
+        <span className="Fib-calc">{this.renderSeenIndexes()}</span>
 
         <h3>Calculated Values:</h3>
         {this.renderValues()}
